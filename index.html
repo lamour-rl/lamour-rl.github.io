@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LaMOuR: Leveraging Language Models for Out-of-Distribution Recovery in Reinforcement Learning</title>
+  <meta name="description" content="Project page for LaMOuR: Leveraging Language Models for Out-of-Distribution Recovery in Reinforcement Learning">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LaMOuR: Leveraging Language Models for Out-of-Distribution Recovery in Reinforcement Learning"/>
+  <meta property="og:description" content="Project page for LaMOuR: Leveraging Language Models for Out-of-Distribution Recovery in Reinforcement Learning"/>
+  <meta property="og:url" content="https://lamour-rl.github.io/"/>
+  <meta property="og:image" content="static/images/concept.png" />
+  <meta property="og:image:width" content="3497"/>
+  <meta property="og:image:height" content="1929"/>
+
+  <meta name="twitter:title" content="LaMOuR: Leveraging Language Models for Out-of-Distribution Recovery in Reinforcement Learning">
+  <meta name="twitter:description" content="TWITTERProject page for LaMOuR: Leveraging Language Models for Out-of-Distribution Recovery in Reinforcement Learning">
+  <meta name="twitter:image" content="static/images/concept.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="Reinforcement Learning, Out-of-Distribution, Language Models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>LaMOuR: Leveraging Language Models for Out-of-Distribution Recovery in Reinforcement Learning</title>
+  <link rel="icon" type="image/x-icon" href="static/images/tilted_chair.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">LaMOuR: Leveraging Language Models for<br>Out-of-Distribution Recovery in<br>Reinforcement Learning</h1>
+            <!-- <h2 class="title is-5 publlication-title">ICRA 2025</h2> -->
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://sites.google.com/snu.ac.kr/chankim" target="https://sites.google.com/snu.ac.kr/chankim">Chan Kim</a><sup>1</sup>,</span>
+                <span class="author-block">
+                <a href="https://ece.snu.ac.kr/en/research-faculty/faculty/fulltime?md=view&profid=p022" target="https://ece.snu.ac.kr/en/research-faculty/faculty/fulltime?md=view&profid=p022">Seung-Woo Seo</a><sup>1</sup>,</span>
+                    <span class="author-block">
+                      <a href="https://arisnu.squarespace.com/director" target="https://arisnu.squarespace.com/director">Seong-Woo Kim</a><sup>1</sup>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><small><br><sup>1</sup> Seoul National University </span>
+                    </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2503.17125" target="https://arxiv.org/abs/2503.17125"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="static/pdfs/supp.pdf" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/SNUChanKim/lamour" target="https://github.com/SNUChanKim/lamour"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/lamour_video_project_page.mp4"
+        type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Deep Reinforcement Learning (DRL) has demonstrated strong performance in robotic control but remains susceptible to out-of-distribution (OOD) states, often resulting in unreliable actions and task failure. While previous methods have focused on minimizing or preventing OOD occurrences, they largely neglect recovery once an agent encounters such states. Although the latest research has attempted to address this by guiding agents back to in-distribution states, their reliance on uncertainty estimation hinders scalability in complex environments. To overcome this limitation, we introduce Language Models for Out-of-Distribution Recovery (LaMOuR), which enables recovery learning without relying on uncertainty estimation. LaMOuR generates dense reward codes that guide the agent back to a state where it can successfully perform its original task, leveraging the capabilities of LVLMs in image description, logical reasoning, and code generation. Experimental results show that LaMOuR substantially enhances recovery efficiency across diverse locomotion tasks and even generalizes effectively to complex environments, including humanoid locomotion and mobile manipulation, where existing methods struggle.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section hero is-small is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">Concept of LaMOuR</h2>
+          <center>
+          <img src="static/images/concept.png" class="center-image blend-img-background"/>
+          </center>
+          <div class="level-set has-text-justified">
+            <p>
+              LaMOuR generates a dense reward code that guides the agent's recovery from an OOD state. Retraining the policy with this reward enables the agent to return to a state where it can successfully perform its original task.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">System Overview</h2>
+          <center>
+          <img src="static/images/main_arch.png" class="center-image blend-img-background"/>
+          </center>
+          <div class="level-set has-text-justified">
+            <p>
+              Overview of recovery reward generation in LaMOuR: First, the LVLM generates a description of the OOD state based on the given OOD state image. Next, it infers the recovery behavior needed for the agent to return to a valid state. Finally, the LVLM generates reward and evaluation codes that align with the inferred recovery behavior.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+
+        <div class="content">
+          <h2 class="title is-3">Experiments in Complex Environments</h2>
+          <div class="content">
+            <h2 class="title is-4">OOD States in Complex Environments</h2>
+            <center>
+              <img src="static/images/complex_envs.png" class="center-image blend-img-background"/>
+            </center>
+            <div class="level-set has-text-justified">
+              <p>
+                Both our method and the baselines are retrained in OOD states, which the original policy never encounters during its training.
+              </p>
+            </div>
+          </div>
+          
+          <div class="content">
+            <h2 class="title is-4">Quantitative Result</h2>
+            <center>
+              <img src="static/images/complex_result.png" class="center-image blend-img-background" style="width: 50%;"/>
+            </center>
+            <div class="level-set has-text-justified">
+              <p>
+                Learning curves for the two complex environments during retraining, evaluated over five episodes every 5000 training steps.
+              </p>
+            </div>
+          </div>
+
+          <style>
+            .video-row {
+              display: flex;
+              justify-content: space-between;
+              gap: 20px;
+            }
+            
+            .video-item {
+              flex: 1;
+              min-width: 0;
+            }
+            
+            .video-item video {
+              width: 100%;
+            }
+          </style>
+          
+          <div class="content">
+            <h2 class="title is-4">Qualitative Result</h2>
+            
+            <div class="video-container video-row">
+              <div class="content video-item">
+                <h2 class="title is-5">Humanoid</h2>
+                <video poster="" autoplay controls muted loop>
+                  <source src="static/videos/humanoid_ood.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+              <div class="content video-item">
+                <h2 class="title is-5">PushChair</h2>
+                <video poster="" autoplay controls muted loop>
+                  <source src="static/videos/pushchair_ood.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+            </div>    
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section hero is-small is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+
+        <div class="content">
+          <h2 class="title is-3">Experiments in MuJoCo Environments</h2>
+          <div class="content">
+            <h2 class="title is-4">OOD States in Four MuJoCo Environments</h2>
+            <center>
+              <img src="static/images/mujoco_envs.png" class="center-image blend-img-background"/>
+            </center>
+            <div class="level-set has-text-justified">
+              <p>
+                Both our method and the baselines are retrained in OOD states, which the original policy never encounters during its training.
+              </p>
+            </div>
+          </div>
+          
+          <div class="content">
+            <h2 class="title is-4">Quantitative Result</h2>
+            <center>
+              <img src="static/images/mujoco_result.png" class="center-image blend-img-background"/>
+            </center>
+            <div class="level-set has-text-justified">
+              <p>
+                Learning curves for the four MuJoCo environments during retraining, evaluated over five episodes every 5000 training steps. Darker lines and shaded areas denote the mean returns and standard deviations across five random seeds, respectively. The black dashed line represents the average return of the original policy on the original task from a valid state. It is calculated as the average return of the original policy over 100 episodes.
+              </p>
+            </div>
+          </div>
+
+          <style>
+            .video-row {
+              display: flex;
+              justify-content: space-between;
+              gap: 20px;
+            }
+            
+            .video-item {
+              flex: 1;
+              min-width: 0;
+            }
+            
+            .video-item video {
+              width: 100%;
+            }
+          </style>
+          
+          <div class="content">
+            <h2 class="title is-4">Qualitative Result</h2>
+            
+            <div class="video-container video-row">
+              <div class="content video-item">
+                <h2 class="title is-5">Ant</h2>
+                <video poster="" autoplay controls muted loop>
+                  <source src="static/videos/ant_ood.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+              <div class="content video-item">
+                <h2 class="title is-5">HalfCheetah</h2>
+                <video poster="" autoplay controls muted loop>
+                  <source src="static/videos/halfcheetah_ood.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+            </div>
+            
+            <div class="video-container video-row">
+              <div class="content video-item">
+                <h2 class="title is-5">Hopper</h2>
+                <video poster="" autoplay controls muted loop>
+                  <source src="static/videos/hopper_ood.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+              <div class="content video-item">
+                <h2 class="title is-5">Walker2D</h2>
+                <video poster="" autoplay controls muted loop>
+                  <source src="static/videos/walker2d_ood.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+
+        <div class="content">
+          <h2 class="title is-3">Qualitative Result of Recovery Reward Generation</h2>
+          <div class="columns is-multiline">
+            <!-- Column 1: Ant -->
+            <div class="column is-one-sixth">
+              <h2 class="title is-5">Ant</h2>
+              <a href="static/qual/ant/ood_description_output.txt">OOD Description</a>
+              <a href="static/qual/ant/behavior_reasoning_output.txt">Behavior Reasoning</a>
+              <a href="static/qual/ant/generated_code.py">Code Generation</a>
+            </div>
+      
+            <!-- Column 2: HalfCheetah -->
+            <div class="column is-one-sixth">
+              <h2 class="title is-5">HalfCheetah</h2>
+              <a href="static/qual/halfcheetah/ood_description_output.txt">OOD Description</a>
+              <a href="static/qual/halfcheetah/behavior_reasoning_output.txt">Behavior Reasoning</a>
+              <a href="static/qual/halfcheetah/generated_code.py">Code Generation</a>
+            </div>
+      
+            <!-- Column 3: Hopper -->
+            <div class="column is-one-sixth">
+              <h2 class="title is-5">Hopper</h2>
+              <a href="static/qual/hopper/ood_description_output.txt">OOD Description</a>
+              <a href="static/qual/hopper/behavior_reasoning_output.txt">Behavior Reasoning</a>
+              <a href="static/qual/hopper/generated_code.py">Code Generation</a>
+            </div>
+      
+            <!-- Column 4: Walker2D -->
+            <div class="column is-one-sixth">
+              <h2 class="title is-5">Walker2D</h2>
+              <a href="static/qual/walker2d/ood_description_output.txt">OOD Description</a>
+              <a href="static/qual/walker2d/behavior_reasoning_output.txt">Behavior Reasoning</a>
+              <a href="static/qual/walker2d/generated_code.py">Code Generation</a>
+            </div>
+      
+            <!-- Column 5: Humanoid -->
+            <div class="column is-one-sixth">
+              <h2 class="title is-5">Humanoid</h2>
+              <a href="static/qual/humanoid/ood_description_output.txt">OOD Description</a>
+              <a href="static/qual/humanoid/behavior_reasoning_output.txt">Behavior Reasoning</a>
+              <a href="static/qual/humanoid/generated_code.py">Code Generation</a>
+            </div>
+      
+            <!-- Column 6: PushChair -->
+            <div class="column is-one-sixth">
+              <h2 class="title is-5">PushChair</h2>
+              <a href="static/qual/pushchair/ood_description_output.txt">OOD Description</a>
+              <a href="static/qual/pushchair/behavior_reasoning_output.txt">Behavior Reasoning</a>
+              <a href="static/qual/pushchair/generated_code.py">Code Generation</a>
+            </div>
+          </div>
+          
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+  
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="row">
+      <h2 class="title is-3">
+        Prompts
+      </h2>
+      <p class="content has-text-justified">
+        <a href="static/prompts/ood_description.txt">OOD Description Prompt</a> |
+        <a href="static/prompts/behavior_reasoning.txt">Behavior Reasoning Prompt</a> |
+        <a href="static/prompts/code_generation.txt">Code Generation Prompt</a> |
+        <a href="static/prompts/example.txt">Few-Shot Example</a>
+      </p>
+      <h2 class="title is-3">
+        Environments Description
+      </h2>
+      <p class="content has-text-justified">
+        <a href="static/env_desc/ant_env.txt">Ant</a> |
+        <a href="static/env_desc/halfcheetah_env.txt">HalfCheetah</a> |
+        <a href="static/env_desc/hopper_env.txt">Hopper</a> |
+        <a href="static/env_desc/walker2d_env.txt">Walker2D</a> |
+        <a href="static/env_desc/humanoid_env.txt">Humanoid</a> |
+        <a href="static/env_desc/pushchair_env.txt">PushChair</a>
+      </p>
+      
+      
+  </div>
+</section>
+
+<!--BibTex citation -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>      </code></pre>
+    </div>
+</section> -->
+<!--End BibTex citation -->
+
+<!-- <section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+  This research was funded by the Korean Ministry of Land, Infrastructure and Transport (MOLIT) through the Smart City Innovative Talent Education Program and by the Korea Institute for Advancement of Technology (KIAT) under a MOTIE grant (P0020536). Additional support came from the Ministry of Education (MOE) and the National Research Foundation of Korea (NRF). K. Kim, D. Jung, and the corresponding author are affiliated with the Smart City Global Convergence program. Research facilities were provided by the Institute of Engineering Research at Seoul National University.  </div>
+</section> -->
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

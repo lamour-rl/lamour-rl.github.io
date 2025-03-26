@@ -1,0 +1,1 @@
+Rotate the body to shift the robot from lying on its back to an upright position with feet on the ground.

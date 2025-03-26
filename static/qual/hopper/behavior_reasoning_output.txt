@@ -1,0 +1,1 @@
+Adjust the robot's limbs to push against the ground and rotate its body to an upright position.
